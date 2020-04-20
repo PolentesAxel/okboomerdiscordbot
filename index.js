@@ -6,7 +6,7 @@ let fs = require(`fs`);
 function download(url){
     request.get(url)
         .on('error', console.error)
-        .pipe(fs.createWriteStream('music.mp3'));
+        .pipe(fs.createWriteStream('ok.mp3'));
 }
 
 
@@ -38,7 +38,7 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content === '%play') {
           msg.member.voiceChannel.join().then(connection => {
-          const dispatcher = connection.playFile('music.mp3')
+          const dispatcher = connection.playFile('ok.mp3')
           dispatcher.on('end', end => msg.member.voiceChannel.leave());
         }).catch(err => console.log(err))
       }
@@ -57,7 +57,7 @@ client.on('message', msg => {
     client.on('message', msg => {
       if(msg.attachments.first()){//checks if an attachment is sent
         console.log("Fichier trouve")  
-        if(msg.attachments.first().filename === `music.mp3`){//Download only png (customize this)
+        if(msg.attachments.first().filename === `ok.mp3`){//Download only png (customize this)
           console.log("Telechargement")  
               download(msg.attachments.first().url);//Function I will show later
               console.log("Telechargement fini") 
