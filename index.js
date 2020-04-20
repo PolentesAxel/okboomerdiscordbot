@@ -12,7 +12,7 @@ function download(url){
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
-    console.log('Pret a baiser des meres')
+    console.log('Je suis ok')
   })
 
 client.on('message', msg => {
@@ -30,7 +30,7 @@ client.on('message', msg => {
         })
         .catch(console.log);
     } else {
-      msg.reply('PTDR T PA SUR UN CHANNEL VOCAL');
+      msg.reply('Pas sur un channel vocal');
     };
   }
 });
