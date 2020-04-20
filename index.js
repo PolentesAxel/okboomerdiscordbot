@@ -16,13 +16,13 @@ client.on('ready', () => {
   })
 
 client.on('message', msg => {
-  if (msg.content === '%test') {
+  if (msg.content === '%oktest') {
     msg.reply('Je fonctionne')
   }
 })
 
 client.on('message', msg => {
-  if (msg.content === '%join') {
+  if (msg.content === '%okjoin') {
     if (msg.member.voiceChannel) {
       msg.member.voiceChannel.join()
         .then(connection => { // Connection is an instance of VoiceConnection
@@ -36,7 +36,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-    if (msg.content === '%play') {
+    if (msg.content === '%okplay') {
           msg.member.voiceChannel.join().then(connection => {
           const dispatcher = connection.playFile('ok.mp3')
           dispatcher.on('end', end => msg.member.voiceChannel.leave());
@@ -45,7 +45,7 @@ client.on('message', msg => {
     })
 
     client.on('message', msg => {
-      if (msg.content === '%dejoin') {
+      if (msg.content === '%okdejoin') {
         if (msg.member.voiceChannel) {
           msg.member.voiceChannel.leave()
         } else {
