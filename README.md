@@ -6,7 +6,7 @@ Pour l'ajouter a un server, cliquez sur ce lien : https://discordapp.com/oauth2/
 
 Les commandes sont :
 
-"%oktest" pour tester le bot 
-"%okjoin" pour join le channel vocal 
-"%okplay" pour lancer la musique que vous venez d'upload 
-"%okdejoin" pour sortir du channel vocal
+"%oktest" pour tester le bot ; 
+"%okjoin" pour join le channel vocal ; 
+"%okplay" pour insulter tout le channel ; 
+"%okdejoin" pour sortir du channel vocal ; 
